@@ -1,0 +1,318 @@
+/* Universal Style */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Heebo', sans-serif;
+  font-size: 16px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  line-height: 1.5;
+  margin-bottom:1rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin:1rem 0;
+  line-height: 2;
+  font-weight: 400;
+}
+
+a {
+  color:inherit;
+  text-decoration: none;
+}
+
+.btn {
+  display: block;
+  width:12rem;
+  padding:1rem 0;
+  margin:2rem 0;
+  font-size: 1rem;
+  border:2px solid yellowgreen;
+  border-radius:3.2rem;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+.btn:hover {
+  background-color: white;
+  color:black;
+  font-weight: bold;
+}
+
+.wrapper {
+  margin-bottom: 3rem;
+}
+
+/* Navigation Section */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.navbar-logo {
+  width:25%;
+  font-family: "Russo One", sans-serif;
+  font-size:2.5rem;
+  color:gold;
+}
+
+.navbar-nav {
+  display: inherit;
+  justify-content: space-between;
+  align-items: center;
+  width:49%;
+}
+
+.navbar-sign-in {
+  display: inherit;
+  justify-content: flex-end;
+  align-items: center;
+  width:25%;
+}
+
+.mobile-icon {
+  display: none;
+}
+
+.navbar-item {
+  margin: 0 1rem;
+}
+
+.navbar-link:hover {
+   text-decoration: underline;
+}
+
+/* Page Header */
+.page-header {
+  background-image: url("field.jpg");
+  background-size: cover;
+  padding: 3%;
+  color:beige;
+  margin-bottom: 3rem;
+}
+
+.page-header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  width: 60%;
+  margin:0 auto;
+  text-align: center;
+  height: 41.5rem;
+}
+
+.page-header-content img {
+  max-width:10rem;
+}
+
+.page-header-heading {
+  font-size:4.5rem;
+  color:gold;
+}
+
+@media only screen and (max-width:1500px) {
+  .page-header-content p {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:920px) {
+  .desktop-icon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .navbar-item {
+    display: none;
+  }
+
+  .mobile-icon {
+    display: block;
+  }
+}
+
+/* Feature Section */
+.page-features {
+  margin-bottom: 3rem;
+}
+
+.feature-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  width:100%;
+  padding:0 1rem;
+}
+
+.feature-heading {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.feature {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.feature-icon {
+  display: block;
+  font-size: 2rem;
+  color:gold;
+  margin: 1.5rem;
+}
+
+@media only screen and (max-width:800px) {
+  .feature {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+/* Upcoming Events Section */
+.page-events {
+  background-color: #ececec;
+  margin-bottom: 3rem;
+}
+
+.event-heading {
+  text-align:center;
+  width:50%;
+  margin:0 auto;
+  padding: 2rem 0;
+}
+
+.event-block-wrapper {
+  display: grid;
+  align-items:center;
+  width:80%;
+  margin: 0 auto;
+  grid-template-columns:repeat(2, 1fr);
+  grid-template-areas:"tournament tournament"
+                      "gathday donation"
+                      "kid kid";
+  gap:1rem;
+}
+
+.event-block-wrapper img {
+  width: 100%;
+  height: 28rem;
+}
+
+.tournament {
+  grid-area: tournament;
+  position: relative;
+}
+
+.tournament::before {
+  content:"Football tournament";
+  position: absolute;
+  font-size: 4rem;
+  color: white;
+  background-color: green;
+  display: block;
+  width: 100%;
+  text-align: center;
+  top: 70%;
+}
+
+.champkids {
+  grid-area: kid;
+  position: relative;
+}
+
+.champkids::before {
+  content:"Football Kids";
+  position: absolute;
+  font-size: 4rem;
+  color: white;
+  background-color: red;
+  display: block;
+  width: 100%;
+  text-align: center;
+  top: 70%;
+}
+
+.gathday {
+  grid-area: gathday;
+  position: relative;
+}
+
+.gathday::before {
+  content:"Gathering Day";
+  position: absolute;
+  font-size: 4rem;
+  color: white;
+  background-color: orange;
+  display: block;
+  width: 100%;
+  text-align: center;
+  top: 70%;
+}
+
+.donation {
+  grid-area: donation;
+  position: relative;
+}
+
+.donation::before {
+  content:"Donation";
+  position: absolute;
+  font-size: 4rem;
+  color: white;
+  background-color: black;
+  display: block;
+  width: 100%;
+  text-align: center;
+  top: 70%;
+}
+
+@media only screen and (max-width:760px) {
+  .event-block-wrapper  {
+    grid-template: repeat(4,1fr) / 1fr;
+    grid-template-areas: "tournament"
+                        "gathday"
+                        "donation"
+                        "kid";
+  width:100%;
+  }
+}
+
+/* Location & Contact Section */
+.page-loc-ctc {
+  color:white;
+}
+
+.contact-box {
+  display: flex;
+  padding:2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #1A1A40;
+}
